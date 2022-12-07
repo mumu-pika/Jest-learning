@@ -1,0 +1,27 @@
+{
+  "name": "jestdemo1",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jest-environment-jsdom": "^29.1.1",
+    "node-notifier": "^10.0.1",
+    "pinia": "^2.0.21",
+    "vue": "^3.2.38"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "@types/jest": "^29.0.3",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.1",
+    "jest": "^29.0.3",
+    "vite": "^3.0.9"
+  }
+}
