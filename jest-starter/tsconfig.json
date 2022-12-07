@@ -3,10 +3,16 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     // 添加加上 jest 和 node 类型声明
     "types": ["node", "jest"],
+    "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "utils/*": ["src/utils/*"]
+      "utils/*": ["src/utils/*"],
+      "components/*": ["src/components/*"],
+      "apis/*": ["src/apis/*"],
+      "hooks/*": ["src/hooks/*"],
+      "store/*": ["src/store/*"]
     },
+
     /* Projects */
     // "incremental": true,                              /* Enable incremental compilation */
     // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
