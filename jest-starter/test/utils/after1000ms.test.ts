@@ -28,7 +28,7 @@ describe('after1000ms', () => {
   it("可以在1000ms后自动执行函数", () => {
     jest.spyOn(global, "setTimeout") // 监听setTimeout函数
     const callback = jest.fn()
-    
+
     // 断言这个函数是没有调用过的
     expect(callback).not.toHaveBeenCalled()
 
@@ -40,6 +40,6 @@ describe('after1000ms', () => {
     expect(setTimeout).toHaveBeenCalledTimes(1) // 期望调用过一次setTimeout
     expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
 
-    
+
   })
 })
