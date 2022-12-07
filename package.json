@@ -1,0 +1,9 @@
+{
+  "name": "Jest-learning",
+  "version": "1.0.0",
+  "description": "A repo for diving into Jest",
+  "main": "index.js",
+  "repository": "https://github.com/mumu-pika/Jest-learning.git",
+  "author": "mumu <rmli1912@foxmail.com>",
+  "license": "MIT"
+}
