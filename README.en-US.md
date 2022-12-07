@@ -1,4 +1,4 @@
-[简体中文](./Readme.md) | English
+[简体中文](./README.md) | English
 
 # Jest diving
 > ## Talk is cheap. Show me the code.
