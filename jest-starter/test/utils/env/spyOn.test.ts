@@ -12,17 +12,48 @@
 //   })
 // })
 
+// 对于单独导入对象
+// import { configObj } from "utils/env";
+// describe('configObj env getter', () => {
+//   it('开发环境', () => {
+//     jest.spyOn(configObj, 'env', 'get').mockReturnValue('dev')
+//     expect(configObj.env).toEqual('dev')
+//   })
 
-import { configObj } from "utils/env";
+//   it('生产环境', () => {
+//     jest.spyOn(configObj, 'env', 'get').mockReturnValue('prod')
+//     expect(configObj.env).toEqual('prod')
+//   })
+// })
 
-describe('configObj env getter', () => {
+// 对于直接导入变量
+import * as envUtils from 'utils/env'
+
+const originEnv = envUtils.env
+
+describe('env', () => {
+  afterEach(() => {
+    Object.defineProperty(envUtils, 'env', {
+      value: originEnv,
+      writable: true,
+    })
+  })
+
   it('开发环境', () => {
-    jest.spyOn(configObj, 'env', 'get').mockReturnValue('dev')
-    expect(configObj.env).toEqual('dev')
+    Object.defineProperty(envUtils, 'env', {
+      value: 'dev',
+      writable: true,
+    })
+
+    expect(envUtils.env).toEqual('dev')
   })
 
   it('生产环境', () => {
-    jest.spyOn(configObj, 'env', 'get').mockReturnValue('prod')
-    expect(configObj.env).toEqual('prod')
+    Object.defineProperty(envUtils, 'env', {
+      value: 'prod',
+      writable: true,
+    })
+
+    expect(envUtils.env).toEqual('prod')
   })
 })
