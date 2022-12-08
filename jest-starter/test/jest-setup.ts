@@ -6,6 +6,8 @@ import 'jest-location-mock'
 import mockConsole from 'jest-mock-console'
 mockConsole() // same as `mockConsole(['log','warn','error'])
 
+// @testing-library/jest-dom 提供了许多关于DOM的 Matcher API
+import '@testing-library/jest-dom'
 
 // Object.defineProperty(global, 'localStorage', {
 //   value: {

@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
     // 添加加上 jest 和 node 类型声明
-    "types": ["node", "jest"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "jsx": "react",
     "baseUrl": "./",
     "paths": {

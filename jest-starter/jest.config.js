@@ -7,8 +7,13 @@ module.exports = {
   preset: 'ts-jest', // 使用tsc来做转译
   moduleDirectories: ['node_modules', 'src'], // 路径简写/别名
   setupFilesAfterEnv: ['./test/jest-setup.ts'], // mock测试环境的配置
-  testEnvironment: "jsdom", // 创建一个 Node.js 的浏览器环境
+  testEnvironment: 'jsdom', // 创建一个 Node.js 的浏览器环境
   // testEnvironment: "jest-environment-jsdom-global", // 创建一个 Node.js 的扩展的浏览器环境
+  // 做转译
+  transform: {
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+      'jest-transform-stub',
+  },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,

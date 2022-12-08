@@ -11,17 +11,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "12.1.4",
     "@types/jest": "27.4.1",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2",
     "antd": "4.19.5",
-    "axios": "0.26.1",
     "classnames": "2.3.1",
     "css-loader": "6.7.1",
     "html-webpack-plugin": "5.5.0",
     "jest": "^27.5.1",
     "jest-environment-jsdom-global": "3.0.0",
     "jest-location-mock": "1.0.9",
+    "jest-transform-stub": "2.0.0",
     "less": "4.1.2",
     "less-loader": "10.2.0",
     "react": "17.0.2",
@@ -35,6 +37,7 @@
     "webpack-dev-server": "4.8.1"
   },
   "dependencies": {
+    "axios": "0.26.1",
     "jest-mock-console": "^2.0.0"
   }
 }
