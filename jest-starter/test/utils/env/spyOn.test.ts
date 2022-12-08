@@ -27,6 +27,11 @@
 // })
 
 // 对于直接导入变量
+/* 
+  我们可以借助于Object.defineProperty()来mock,
+  虽然这个 API 很强大，但是使用时会污染到别的测试用例，
+  因此你需要在每个用例执行完后重新赋一次原来的值。
+*/
 import * as envUtils from 'utils/env'
 
 const originEnv = envUtils.env
