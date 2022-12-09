@@ -32,33 +32,33 @@
   虽然这个 API 很强大，但是使用时会污染到别的测试用例，
   因此你需要在每个用例执行完后重新赋一次原来的值。
 */
-import * as envUtils from 'utils/env'
+import * as envUtils from "utils/env";
 
-const originEnv = envUtils.env
+const originEnv = envUtils.env;
 
-describe('env', () => {
+describe("env", () => {
   afterEach(() => {
-    Object.defineProperty(envUtils, 'env', {
+    Object.defineProperty(envUtils, "env", {
       value: originEnv,
       writable: true,
-    })
-  })
+    });
+  });
 
-  it('开发环境', () => {
-    Object.defineProperty(envUtils, 'env', {
-      value: 'dev',
+  it("开发环境", () => {
+    Object.defineProperty(envUtils, "env", {
+      value: "dev",
       writable: true,
-    })
+    });
 
-    expect(envUtils.env).toEqual('dev')
-  })
+    expect(envUtils.env).toEqual("dev");
+  });
 
-  it('生产环境', () => {
-    Object.defineProperty(envUtils, 'env', {
-      value: 'prod',
+  it("生产环境", () => {
+    Object.defineProperty(envUtils, "env", {
+      value: "prod",
       writable: true,
-    })
+    });
 
-    expect(envUtils.env).toEqual('prod')
-  })
-})
+    expect(envUtils.env).toEqual("prod");
+  });
+});

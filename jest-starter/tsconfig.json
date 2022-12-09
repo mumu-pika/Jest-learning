@@ -10,7 +10,7 @@
       "components/*": ["src/components/*"],
       "apis/*": ["src/apis/*"],
       "hooks/*": ["src/hooks/*"],
-      "store/*": ["src/store/*"],
+      "store/*": ["src/store/*"]
     },
 
     /* Projects */

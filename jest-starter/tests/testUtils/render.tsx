@@ -1,9 +1,9 @@
 // tests/testUtils/render.tsx
-import React, { FC } from 'react'
-import { render as rtlRender, RenderOptions } from '@testing-library/react'
-import { configureStore } from '@reduxjs/toolkit'
-import { Provider } from 'react-redux'
-import { reducer, RootState } from 'store/index'
+import React, { FC } from "react";
+import { render as rtlRender, RenderOptions } from "@testing-library/react";
+import { configureStore } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
+import { reducer, RootState } from "store/index";
 
 /* 
   集成测试的两个关键点
@@ -16,8 +16,8 @@ import { reducer, RootState } from 'store/index'
 */
 
 interface CustomRenderOptions extends RenderOptions {
-  preloadedState?: RootState
-  store?: ReturnType<typeof configureStore>
+  preloadedState?: RootState;
+  store?: ReturnType<typeof configureStore>;
 }
 
 const render = (ui: React.ReactElement, options: CustomRenderOptions) => {
@@ -26,15 +26,15 @@ const render = (ui: React.ReactElement, options: CustomRenderOptions) => {
     preloadedState = {},
     store = configureStore({ reducer, preloadedState }),
     ...renderOptions
-  } = options
+  } = options;
 
   // 使用 Provider 包裹
   const Wrapper: FC = ({ children }) => {
-    return <Provider store={store}>{children}</Provider>
-  }
+    return <Provider store={store}>{children}</Provider>;
+  };
 
   // 使用 RTL 的 render 函数
-  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
-}
+  return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
+};
 
-export default render
+export default render;

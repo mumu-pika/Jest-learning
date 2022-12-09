@@ -1,36 +1,36 @@
 // src/user/reducer.ts
-import { createSlice } from '@reduxjs/toolkit'
-import { fetchUserThunk } from './thunks'
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchUserThunk } from "./thunks";
 
 const initialState = {
-  id: '',
-  name: '',
+  id: "",
+  name: "",
   age: 0,
-  status: '',
-}
+  status: "",
+};
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
   reducers: {
     updateUserName: (state, action) => {
-      state.name = action.payload.name
+      state.name = action.payload.name;
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchUserThunk.pending, (state) => {
-      state.status = 'loading'
-    })
+      state.status = "loading";
+    });
     builder.addCase(fetchUserThunk.fulfilled, (state, action) => {
-      state.status = 'complete'
-      state.name = action.payload.name
-      state.id = action.payload.id
-    })
+      state.status = "complete";
+      state.name = action.payload.name;
+      state.id = action.payload.id;
+    });
     builder.addCase(fetchUserThunk.rejected, (state) => {
-      state.status = 'error'
-    })
+      state.status = "error";
+    });
   },
-})
+});
 
-export const { updateUserName } = userSlice.actions
-export default userSlice.reducer
+export const { updateUserName } = userSlice.actions;
+export default userSlice.reducer;

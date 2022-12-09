@@ -8,19 +8,19 @@
   对刚说的 storage 做下简化，我们只对 localStorage 进行封装，一共有 set 和 get 两个函数。
 */
 
-const KEY_NAME = 'my-app-'
+const KEY_NAME = "my-app-";
 
 const set = (key: string, value: string) => {
-  localStorage.setItem(KEY_NAME + key, value)
-}
+  localStorage.setItem(KEY_NAME + key, value);
+};
 
 const get = (key: string) => {
-  return localStorage.getItem(KEY_NAME + key)
-}
+  return localStorage.getItem(KEY_NAME + key);
+};
 
 const storage = {
   get,
   set,
-}
+};
 
-export default storage
+export default storage;

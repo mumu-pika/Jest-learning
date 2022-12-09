@@ -1,4 +1,4 @@
 // src/types/global.d.ts
 declare namespace globalThis {
-  var jsdom: any
+  let jsdom: any;
 }

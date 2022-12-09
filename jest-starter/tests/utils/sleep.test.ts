@@ -7,30 +7,30 @@
 
 */
 
-import sleep from 'utils/sleep'
+import sleep from "utils/sleep";
 
-describe('sleep', () => {
+describe("sleep", () => {
   beforeAll(() => {
-    jest.useFakeTimers()
-  })
+    jest.useFakeTimers();
+  });
 
-  it('可以睡眠 1000ms后执行', async () => {
-    const callback = jest.fn()
+  it("可以睡眠 1000ms后执行", async () => {
+    const callback = jest.fn();
     const act = async (callback: () => void) => {
-      await sleep(1000)
-      callback()
-    }
+      await sleep(1000);
+      callback();
+    };
 
-    const promise = act(callback)
+    const promise = act(callback);
 
     // callback 还未调用
-    expect(callback).not.toHaveBeenCalled()
+    expect(callback).not.toHaveBeenCalled();
 
     // 清算 Jest Message Queue 的回调，其中会执行 setTimeout 里的 resolve 函数
-    jest.runAllTimers()
+    jest.runAllTimers();
 
-    await promise
-    expect(callback).toHaveBeenCalled()
-    expect(callback).toHaveBeenCalledTimes(1)
-  })
-})
+    await promise;
+    expect(callback).toHaveBeenCalled();
+    expect(callback).toHaveBeenCalledTimes(1);
+  });
+});

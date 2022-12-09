@@ -4,15 +4,15 @@
  */
 
 module.exports = {
-  preset: 'ts-jest', // 使用tsc来做转译
-  moduleDirectories: ['node_modules', 'src'], // 路径简写/别名
-  setupFilesAfterEnv: ['./tests/jest-setup.ts'], // mock测试环境的配置
-  testEnvironment: 'jsdom', // 创建一个 Node.js 的浏览器环境
+  preset: "ts-jest", // 使用tsc来做转译
+  moduleDirectories: ["node_modules", "src"], // 路径简写/别名
+  setupFilesAfterEnv: ["./tests/jest-setup.ts"], // mock测试环境的配置
+  testEnvironment: "jsdom", // 创建一个 Node.js 的浏览器环境
   // testEnvironment: "jest-environment-jsdom-global", // 创建一个 Node.js 的扩展的浏览器环境
   // 做转译
   transform: {
-    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
-      'jest-transform-stub',
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$":
+      "jest-transform-stub",
   },
 
   // All imported modules in your tests should be mocked automatically
@@ -34,7 +34,7 @@ module.exports = {
   // collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: 'coverage',
+  coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -42,7 +42,7 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: 'v8',
+  coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -202,4 +202,4 @@ module.exports = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-}
+};

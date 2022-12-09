@@ -8,14 +8,14 @@ import storage from "utils/storage";
 
 */
 
-describe('storage', () => {
-  it('可以设置缓存', () => {
-    storage.set("newKey", "hello")
-    expect(localStorage.getItem('my-app-newKey')).toEqual('hello')
-  })
+describe("storage", () => {
+  it("可以设置缓存", () => {
+    storage.set("newKey", "hello");
+    expect(localStorage.getItem("my-app-newKey")).toEqual("hello");
+  });
 
-  it('可以获取缓存', () => {
-    localStorage.setItem('my-app-newKey', 'hello')
-    expect(storage.get('newKey')).toEqual('hello')
-  })
-})
+  it("可以获取缓存", () => {
+    localStorage.setItem("my-app-newKey", "hello");
+    expect(storage.get("newKey")).toEqual("hello");
+  });
+});

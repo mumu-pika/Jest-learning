@@ -2,8 +2,8 @@
 // 全局声明类型文件
 
 // 声明less文件
-declare module '*.less' {
+declare module "*.less" {
   // const content: any
-  const content: { [classname: string]: string }
-  export default content
+  const content: { [classname: string]: string };
+  export default content;
 }

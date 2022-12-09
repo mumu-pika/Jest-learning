@@ -1,10 +1,10 @@
 // // tests/store/user/reducer.test.ts
 // import reducer, { updateUserName } from 'store/user/reducer'
 
-// /* 
+// /*
 //   action的测试
 //   reducer 本身也是纯函数，它的作用就是改变数据状态，
-//   所以这里我们在第一个参数传入当前状态，在第二个参数传入 action， 
+//   所以这里我们在第一个参数传入当前状态，在第二个参数传入 action，
 //   最后 expect 一下返回的新状态 currentState 就完成测试了。
 // */
 // describe('reducer', () => {
@@ -28,14 +28,13 @@
 //   })
 // })
 
-
 // tests/store/user/reducer.test.ts
 import reducer, { updateUserName } from "store/user/reducer";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import server from "../../mocks/server";
 import { rest } from "msw";
-import { fetchUserThunk } from "store/user/thunks"; 
+import { fetchUserThunk } from "store/user/thunks";
 
 // 初始化函数
 const setupHttp = (name?: string, age?: number) => {

@@ -1,6 +1,6 @@
 // src/utils/after1000ms.test.ts
 
-import after1000ms from "utils/after1000ms"
+import after1000ms from "utils/after1000ms";
 
 // 下面这个是没有使用mock的方式
 // 我们不得不等待1000ms才能跑完这个用例
@@ -20,26 +20,24 @@ import after1000ms from "utils/after1000ms"
   只被调用了一次。
 */
 
-describe('after1000ms', () => {
+describe("after1000ms", () => {
   beforeAll(() => {
-    jest.useFakeTimers() // 使用mock定时器
-  })
+    jest.useFakeTimers(); // 使用mock定时器
+  });
 
   it("可以在1000ms后自动执行函数", () => {
-    jest.spyOn(global, "setTimeout") // 监听setTimeout函数
-    const callback = jest.fn()
+    jest.spyOn(global, "setTimeout"); // 监听setTimeout函数
+    const callback = jest.fn();
 
     // 断言这个函数是没有调用过的
-    expect(callback).not.toHaveBeenCalled()
+    expect(callback).not.toHaveBeenCalled();
 
-    after1000ms(callback)
+    after1000ms(callback);
 
-    jest.runAllTimers() // 快进时间
+    jest.runAllTimers(); // 快进时间
 
-    expect(callback).toHaveBeenCalled()
-    expect(setTimeout).toHaveBeenCalledTimes(1) // 期望调用过一次setTimeout
-    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
-
-
-  })
-})
+    expect(callback).toHaveBeenCalled();
+    expect(setTimeout).toHaveBeenCalledTimes(1); // 期望调用过一次setTimeout
+    expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000);
+  });
+});

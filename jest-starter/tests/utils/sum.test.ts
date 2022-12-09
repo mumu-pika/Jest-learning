@@ -1,8 +1,8 @@
-import sum from 'utils/sum'
+import sum from "utils/sum";
 
-describe('sum', () => {
+describe("sum", () => {
   // test 与 it 同个功能
-  it('加法sum测试', () => {
-    expect(sum(1, 1)).toEqual(2)
-  })
-})
+  it("加法sum测试", () => {
+    expect(sum(1, 1)).toEqual(2);
+  });
+});

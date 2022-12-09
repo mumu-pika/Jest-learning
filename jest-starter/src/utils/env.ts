@@ -22,4 +22,4 @@
 // export const getEnv = () => 'test'
 
 // 直接导出变量
-export const env = 'test'
+export const env = "test";

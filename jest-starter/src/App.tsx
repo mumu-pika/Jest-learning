@@ -1,8 +1,8 @@
 // src/App.tsx
-import React from 'react'
-import Title from 'components/Title'
-import AuthButton from 'components/AuthButton'
-import User from 'components/User'
+import React from "react";
+// import Title from 'components/Title'
+import AuthButton from "components/AuthButton";
+import User from "components/User";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <User />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
