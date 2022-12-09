@@ -16,6 +16,7 @@
     "@types/jest": "27.4.1",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2",
+    "@types/redux-mock-store": "1.0.3",
     "antd": "4.19.5",
     "classnames": "2.3.1",
     "css-loader": "6.7.1",
@@ -29,6 +30,7 @@
     "msw": "0.39.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "redux-mock-store": "1.5.4",
     "style-loader": "3.3.1",
     "ts-jest": "27.1.4",
     "ts-loader": "9.2.8",
@@ -38,7 +40,10 @@
     "webpack-dev-server": "4.8.1"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "1.8.1",
     "axios": "0.26.1",
-    "jest-mock-console": "^2.0.0"
+    "jest-mock-console": "^2.0.0",
+    "react-redux": "8.0.1",
+    "redux": "4.2.0"
   }
 }

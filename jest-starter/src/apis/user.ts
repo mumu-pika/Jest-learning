@@ -12,3 +12,14 @@ export interface GetUserRoleRes {
 export const getUserRole = async () => {
   return axios.get<GetUserRoleRes>('https://mysite.com/api/role')
 }
+
+// ********************************* //
+export interface FetchUserRes {
+  id: string
+  name: string
+}
+
+// 获取用户列表
+export const fetchUser = async () => {
+  return axios.get<FetchUserRes> ('https://mysite.com/api/users')
+}
