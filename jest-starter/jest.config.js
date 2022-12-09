@@ -8,6 +8,7 @@ module.exports = {
   moduleDirectories: ["node_modules", "src"], // 路径简写/别名
   setupFilesAfterEnv: ["./tests/jest-setup.ts"], // mock测试环境的配置
   testEnvironment: "jsdom", // 创建一个 Node.js 的浏览器环境
+  // maxWorkers: 1, // 单线程, 在测试数量不多的时候可能会更快
   // testEnvironment: "jest-environment-jsdom-global", // 创建一个 Node.js 的扩展的浏览器环境
   // 做转译
   transform: {
