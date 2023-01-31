@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import { reducer, RootState } from "store/index";
 
-/* 
+/*
   集成测试的两个关键点
   * 像真实用户那样去和组件交互
   * Mock HTTP (外部请求)
