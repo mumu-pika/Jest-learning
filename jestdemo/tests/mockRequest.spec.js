@@ -15,7 +15,7 @@ import { axiosRequest, fetchData, API } from '../api/index'
 */
 jest.mock('axios')
 
-describe('请求测试集', () => {
+describe('mock请求测试集', () => {
   it('模拟axios获取到预先设定的data', async () => {
     axios.get.mockResolvedValue({
       data: {
@@ -51,3 +51,6 @@ describe('请求测试集', () => {
   })
 
 })
+
+
+
