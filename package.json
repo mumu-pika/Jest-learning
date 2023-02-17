@@ -6,8 +6,7 @@
   "repository": "https://github.com/mumu-pika/Jest-learning.git",
   "author": "mumu <rmli1912@foxmail.com>",
   "license": "MIT",
-
   "scripts": {
-    
+    "test": "jest --coverage"
   }
 }
